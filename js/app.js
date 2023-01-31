@@ -21,36 +21,58 @@ const base = 0.21
 console.log('Il prezzo al km è:', base)
 
 //5. Definisco il prezzo per utente standard
-let tot = (km * base)
+const tot = (km * base)
+const scontoU = (tot * 0.20)
+const scontoO = (tot * 0.40)
 
-
+const prezzo = document.getElementById('totale')
 
 // Calcolo sconto per utente
 
 if (anni < 19) {
-    const sconto = (tot * 0.20)
-    console.log('sconto under è:', sconto)
-    if (anni < 19){
-        let totale = (tot - sconto)
-    console.log = ('Il totale scontato è:', totale)
-    }
+    console.log('sconto under è:', scontoU)
+    const totaleUnder = tot - scontoU
+    console.log = ('Il totale scontato è:', totaleUnder)
+    prezzo.innerHTML = totaleUnder + "$"
 }
  else if (anni > 65) {
     {
-        const sconto = (tot * 0.40)
-        console.log('sconto over è:', sconto)
-
-        if (anni > 65){
-            let totale = (tot - sconto)
-        console.log = ('Il totale scontato è:', totale)
-        }
+        console.log('sconto over è:', scontoO)
+        const totaleOver = tot - scontoO
+        console.log = ('Il totale scontato è:', totaleOver)
+        prezzo.innerHTML = totaleOver + "$"
  }
     }
 
-    else{
-        console.log = ('Il totale è:', totale)
+    else {
+        console.log('non scontato')
+        console.log = ('Il totale è:', tot)
+        prezzo.innerHTML = tot + "$"
     }
+
+
+
+// STAMPO
+
+
+    
  
+
+    // PREZZO SCONTATO
+
+    // if (anni < 19){
+    //     const totaleU = tot - scontoU
+    // console.log = ('Il totale scontato è:', totaleU)
+    // }
+
+    // else if (anni > 65){
+    //     const totaleO = tot - scontoO
+    // console.log = ('Il totale scontato è:', totaleO)
+    // }
+
+    // else{
+    //     console.log = ('Il totale è:', totale)
+    // }
 
 
 
