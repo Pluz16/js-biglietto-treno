@@ -30,23 +30,23 @@ const prezzo = document.getElementById('totale')
 // Calcolo sconto per utente
 
 if (anni < 19) {
-    console.log('sconto under è:', scontoU)
+    console.log('sconto under è:', scontoU.toFixed(2))
     const totaleUnder = tot - scontoU
-    console.log = ('Il totale scontato è:', totaleUnder)
+    console.log = ('Il totale scontato è:', totaleUnder.toFixed(2))
     prezzo.innerHTML = totaleUnder + "$"
 }
  else if (anni > 65) {
     {
-        console.log('sconto over è:', scontoO)
+        console.log('sconto over è:', scontoO.toFixed(2))
         const totaleOver = tot - scontoO
-        console.log = ('Il totale scontato è:', totaleOver)
+        console.log = ('Il totale scontato è:', totaleOver.toFixed(2))
         prezzo.innerHTML = totaleOver + "$"
  }
     }
 
     else {
         console.log('non scontato')
-        console.log = ('Il totale è:', tot)
+        console.log = ('Il totale è:', tot.toFixed(2))
         prezzo.innerHTML = tot + "$"
     }
 
