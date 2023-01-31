@@ -21,26 +21,36 @@ const base = 0.21
 console.log('Il prezzo al km è:', base)
 
 //5. Definisco il prezzo per utente standard
-const totale = (km * base)
-console.log('Il totale è:', totale)
+let tot = (km * base)
 
 
 
 // Calcolo sconto per utente
 
 if (anni < 19) {
-    const scontoUnder = 0.20
-    console.log('sconto under')
-}
- else  {
-    if (anni > 65){
-        const scontoOver = 0.40
-        console.log('sconto over')
+    const sconto = (tot * 0.20)
+    console.log('sconto under è:', sconto)
+    if (anni < 19){
+        let totale = (tot - sconto)
+    console.log = ('Il totale scontato è:', totale)
     }
+}
+ else if (anni > 65) {
+    {
+        const sconto = (tot * 0.40)
+        console.log('sconto over è:', sconto)
+
+        if (anni > 65){
+            let totale = (tot - sconto)
+        console.log = ('Il totale scontato è:', totale)
+        }
  }
+    }
 
- //Calcolo prezzo
-
+    else{
+        console.log = ('Il totale è:', totale)
+    }
  
+
 
 
